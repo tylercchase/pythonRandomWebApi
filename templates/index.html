@@ -4,13 +4,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
+
 </head>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 <body>
-<p>Welcome to my webpage, this is currently being used to generate a random image from a set of images contained within
-    a directory. It returns the image as an img tag</p>
-<a href="/api">Here's a link to just see a random image of whatever is in the img direcctory</a><br/>
-<a href="/api/JSON">Here's a link to a JSON output of a random image's url so you can use it in another api or get it as
-    a HTTP GET request</a>
+<div class="container">
+    <div class="card">
+        <div class="card-content center-align">
+            <h2 class="orange-text">Welcome!</h2>
+            <p class="plain">Welcome to the randome image API. Click the button on the left to get to the web interface. Click the button on the right to get the url for the JSON output, which givess a link to a random image within the database</p>
+            <a href="/api"><button class="btn cyan">Web interface</button></a>
+            <a href="api/JSON"><button class="btn cyan">Link to JSON output</button></a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
