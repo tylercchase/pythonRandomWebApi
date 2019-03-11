@@ -4,7 +4,23 @@
     <title>Your random image</title>
 </head>
 <body>
-<img src="/static/img/{{image_url}}" alt="ah" width="400px" height="400px"/>
-<a href="/static/img/{{image_url}}" target="/">Here's the link to the image<a/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-content center-align">
+            <h2 class="orange-text">Here's a random image!</h2>
+            <img src="/static/img/{{image_url}}" alt="ah" width="400px" height="400px"/>
+            <br />
+            <br />
+            <br />
+            <a href=""><button class="btn orange">New image</button> </a>
+
+            <a href="/static/img/{{image_url}}" target="/"><button class="btn orange">Link to the image</button><a/>
+        </div>
+    </div>
+</div>
 </body>
 </html>
