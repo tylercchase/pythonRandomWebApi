@@ -37,8 +37,8 @@ jobs:
       with:
         args: kubernetes cluster kubeconfig show jlr-k8s > $GITHUB_WORKSPACE/.kubeconfig
     - name: Cook hotdogs
-      run: ||
-      kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig apply -f $GITHUB_WORKSPACE/k8s.yaml 
-      kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig rollout restart deployment/hotdogapi
-      kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig rollout status deployment/hotdogapi
+      run: |
+        kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig apply -f $GITHUB_WORKSPACE/k8s.yaml 
+        kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig rollout restart deployment/hotdogapi
+        kubectl --kubeconfig=$GITHUB_WORKSPACE/.kubeconfig rollout status deployment/hotdogapi
   
