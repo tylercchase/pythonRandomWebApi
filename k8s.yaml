@@ -1,0 +1,48 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hotdogAPI
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: hotdogAPI
+  name: hotdogAPI
+  labels:
+    app: hotdogAPI
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hotdogAPI
+  template:
+    metadata:
+      labels:
+        app: hotdogAPI
+    spec:
+      containers:
+      - name: hotdogAPI
+        image: jigglebox/hotdogAPI
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: hotdogAPI
+  name: hotdogAPI
+  labels:
+    app: hotdogAPI
+spec:
+  selector:
+    app: hotdogAPI
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: http
