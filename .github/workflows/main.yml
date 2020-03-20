@@ -33,7 +33,7 @@ jobs:
     - name: Save kubeconfig
       uses: digitalocean/action-doctl@master
       env:
-        ACCESS_TOKEN: ${{ secrets.access_token }}
+        DIGITALOCEAN_ACCESS_TOKEN: ${{ secrets.access_token }}
       with:
         args: kubernetes cluster kubeconfig show jlr-k8s > $GITHUB_WORKSPACE/.kubeconfig
     - name: Cook hotdogs
