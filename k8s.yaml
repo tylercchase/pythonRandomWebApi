@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: hotdogAPI
-        image: jigglebox/hotdogAPI
+        image: jigglebox/hotdogapi
         imagePullPolicy: Always
         ports:
           - containerPort: 80
