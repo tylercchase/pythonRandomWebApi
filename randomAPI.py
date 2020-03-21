@@ -5,7 +5,6 @@ import random
 from pathlib import Path
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
 
 
 def getImage():
