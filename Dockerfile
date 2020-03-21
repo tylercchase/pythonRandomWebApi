@@ -4,4 +4,6 @@ RUN apt update -y && apt install -y gcc
 RUN pip3 install flask uwsgi
 COPY uwsgi.ini /
 COPY randomAPI.py /
+COPY static /static
+COPY templates /templates
 CMD ["uwsgi", "--ini", "/uwsgi.ini"]
