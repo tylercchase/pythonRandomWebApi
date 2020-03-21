@@ -6,4 +6,4 @@ COPY uwsgi.ini /
 COPY randomAPI.py /
 COPY static /static
 COPY templates /templates
-CMD ["uwsgi", "--ini", "/uwsgi.ini"]
+CMD ["uwsgi", "--ini", "uwsgi.ini"]
