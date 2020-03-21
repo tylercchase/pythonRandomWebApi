@@ -37,5 +37,5 @@ def jsonstuff():
     }
     return jsonify(image)
 
-
-app.run()
+if __name__ == "__main__":
+    app.run()
